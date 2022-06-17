@@ -1,0 +1,16 @@
+<!-- base.html을 상속하면서 만들어짐-->
+{% extends 'base.html' %}
+{% block content %}
+
+<h1> 새 글 작성</h1>
+
+<form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form}}
+    <table>
+        {{form.as_table}}
+    </table>
+    <input type="submit" value="새 글">
+</form>
+
+{% endblock %}
